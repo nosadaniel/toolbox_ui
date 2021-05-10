@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+s
+    <LinearLayout
+        android:id="@+id/menu_box"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+
+
+        <ImageButton
+            android:id="@+id/menu_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/nav_icon"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="10dp"
+            />
+
+        <TextView
+            android:id="@+id/project_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/nunitosans_semibold"
+            android:gravity="center_horizontal"
+            android:text="@string/app_name"
+            android:textColor="@android:color/black"
+            android:textSize="26sp"
+            android:layout_weight="1"
+            />
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="5dp"
+        android:layout_marginHorizontal="5dp"
+        android:id="@+id/risk_container"
+        android:padding="10dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Your general Risk Score:"
+            android:layout_gravity="center"
+            android:textSize="16sp"
+            android:fontFamily="@font/nunitosans_semibold">
+
+        </TextView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="75.5"
+            android:textColor="@color/red"
+            android:layout_gravity="center"
+            android:textSize="34sp"
+            android:id="@+id/risk_score"
+            android:fontFamily="@font/nunitosans_semibold">
+
+        </TextView>
+
+        <Button
+            android:id="@+id/scan_btn"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/scan_btn"
+            android:clickable="true"
+            android:elevation="3dp"
+            android:fontFamily="@font/nunitosans_semibold"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:layout_marginHorizontal="30dp">
+
+
+            <Button
+                android:id="@+id/employee_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/bg_btn"
+                android:layout_marginEnd="70dp"
+                android:text="Employee Risk" />
+
+            <Button
+                android:id="@+id/device_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/bg_btn"
+                android:text="Device Risk" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Current Threats"
+                android:layout_weight="1"
+                android:textSize="16sp"></TextView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Threat Risk"
+                android:textSize="16sp"></TextView>
+
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginHorizontal="12dp">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:elevation="10dp"
+                android:layout_marginBottom="10dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="5dp"
+                    android:paddingHorizontal="8dp">
+                    <TextView
+                        android:layout_width="111dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Phishing"
+                        android:textSize="20sp"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/nunitosans_semibold"/>
+
+                    <TextView
+
+                        android:layout_width="100.95dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/phishing"
+                        android:textColor="@color/grey"
+                        android:layout_weight="1"
+
+                        />
+                    <LinearLayout
+                        android:layout_width="91dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="81dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/indicator"
+                            android:textColor="@color/grey" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="High"
+                            android:textSize="12sp"
+                            android:layout_gravity="center"/>
+                        <Button
+                            android:layout_marginTop="5dp"
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_btn2"
+                            android:text="Improve"
+                            android:textSize="16sp"
+                            android:clickable="true"
+                            android:textColor="@color/white"
+                            android:elevation="3dp"
+                            android:layout_gravity="center"
+                            android:textAllCaps="false" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:elevation="10dp"
+                android:layout_marginBottom="10dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="5dp"
+                    android:paddingHorizontal="8dp">
+                    <TextView
+                        android:layout_width="111dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Malware"
+                        android:textSize="20sp"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/nunitosans_semibold"/>
+
+                    <TextView
+
+                        android:layout_width="100.95dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/malware"
+                        android:textColor="@color/grey"
+                        android:layout_weight="1"
+
+                        />
+                    <LinearLayout
+                        android:layout_width="91dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="81dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/indicator"
+                            android:textColor="@color/grey" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Very High"
+                            android:textSize="12sp"
+                            android:layout_gravity="center"/>
+                        <Button
+                            android:layout_marginTop="5dp"
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_btn2"
+                            android:text="Improve"
+                            android:textSize="16sp"
+                            android:clickable="true"
+                            android:textColor="@color/white"
+                            android:elevation="3dp"
+                            android:layout_gravity="center"
+                            android:textAllCaps="false" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:elevation="10dp"
+                android:layout_marginBottom="10dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="5dp"
+                    android:paddingHorizontal="8dp">
+                    <TextView
+                        android:layout_width="111dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Web-based attacks"
+                        android:textSize="20sp"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/nunitosans_semibold"/>
+
+                    <TextView
+
+                        android:layout_width="100.95dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/web_attack"
+                        android:textColor="@color/grey"
+                        android:layout_weight="1"
+
+                        />
+                    <LinearLayout
+                        android:layout_width="91dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="81dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/indicator"
+                            android:textColor="@color/grey" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Low"
+                            android:textSize="12sp"
+                            android:layout_gravity="center"/>
+                        <Button
+                            android:layout_marginTop="5dp"
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_btn2"
+                            android:text="Improve"
+                            android:textSize="16sp"
+                            android:clickable="true"
+                            android:textColor="@color/white"
+                            android:elevation="3dp"
+                            android:layout_gravity="center"
+                            android:textAllCaps="false" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:elevation="10dp"
+                android:layout_marginBottom="10dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="5dp"
+                    android:paddingHorizontal="8dp">
+                    <TextView
+                        android:layout_width="111dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Spam"
+                        android:textSize="20sp"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/nunitosans_semibold"/>
+
+                    <TextView
+
+                        android:layout_width="100.95dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/spam"
+                        android:textColor="@color/grey"
+                        android:layout_weight="1"
+
+                        />
+                    <LinearLayout
+                        android:layout_width="91dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="81dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/indicator"
+                            android:textColor="@color/grey" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="High"
+                            android:textSize="12sp"
+                            android:layout_gravity="center"/>
+                        <Button
+                            android:layout_marginTop="5dp"
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_btn2"
+                            android:text="Improve"
+                            android:textSize="16sp"
+                            android:clickable="true"
+                            android:textColor="@color/white"
+                            android:elevation="3dp"
+                            android:layout_gravity="center"
+                            android:textAllCaps="false" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

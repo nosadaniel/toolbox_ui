@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">GEIGER Toolbox</string>
+    <fraction name="geiger_score">75.5</fraction>
+    <string name="scan_label">Scan Risk</string>
+</resources>
